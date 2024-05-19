@@ -1,5 +1,8 @@
 pandas
 matplotlib
 seaborn
+scikit-learn
+catboost
+xgboost
 
 -e. # this connect our setup.py but it should not be installed, so I will write some condition in get_requirements function.

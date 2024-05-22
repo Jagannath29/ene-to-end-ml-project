@@ -1,0 +1,179 @@
+[2024-05-22 13:21:44,833] 97 werkzeug - INFO - 127.0.0.1 - - [22/May/2024 13:21:44] "GET /predictdata HTTP/1.1" 200 -
+[2024-05-22 13:22:04,483] 838 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/app.py", line 30, in predict_datapoint
+    writing_score=float(request.form.get('reading_score'))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+[2024-05-22 13:22:04,488] 97 werkzeug - INFO - 127.0.0.1 - - [22/May/2024 13:22:04] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[2024-05-22 13:23:20,029] 97 werkzeug - INFO - 127.0.0.1 - - [22/May/2024 13:23:20] "GET /predictdata HTTP/1.1" 200 -
+[2024-05-22 13:23:40,335] 838 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/app.py", line 30, in predict_datapoint
+    writing_score=float(request.form.get('reading_score'))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+[2024-05-22 13:23:40,339] 97 werkzeug - INFO - 127.0.0.1 - - [22/May/2024 13:23:40] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[2024-05-22 13:25:41,588] 97 werkzeug - INFO - 127.0.0.1 - - [22/May/2024 13:25:41] "GET /predictdata HTTP/1.1" 200 -
+[2024-05-22 13:25:58,334] 838 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/app.py", line 30, in predict_datapoint
+    test_preparation_course=request.form.get('test_preparation_course'),
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+[2024-05-22 13:25:58,338] 97 werkzeug - INFO - 127.0.0.1 - - [22/May/2024 13:25:58] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[2024-05-22 13:32:35,659] 97 werkzeug - INFO - 127.0.0.1 - - [22/May/2024 13:32:35] "GET /predictdata HTTP/1.1" 200 -
+[2024-05-22 13:32:57,817] 838 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/app.py", line 30, in predict_datapoint
+    writing_score=float(request.form.get('reading_score'))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+[2024-05-22 13:32:57,820] 97 werkzeug - INFO - 127.0.0.1 - - [22/May/2024 13:32:57] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[2024-05-22 13:35:03,529] 97 werkzeug - INFO - 127.0.0.1 - - [22/May/2024 13:35:03] "GET /predictdata HTTP/1.1" 200 -
+[2024-05-22 13:35:22,275] 838 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/app.py", line 30, in predict_datapoint
+    math_score=float(request.form.get('math_score'))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+[2024-05-22 13:35:22,278] 97 werkzeug - INFO - 127.0.0.1 - - [22/May/2024 13:35:22] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[2024-05-22 13:35:28,293] 838 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/app.py", line 30, in predict_datapoint
+    math_score=float(request.form.get('math_score'))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+[2024-05-22 13:35:28,296] 97 werkzeug - INFO - 127.0.0.1 - - [22/May/2024 13:35:28] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[2024-05-22 13:35:32,260] 838 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/app.py", line 30, in predict_datapoint
+    math_score=float(request.form.get('math_score'))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+[2024-05-22 13:35:32,264] 97 werkzeug - INFO - 127.0.0.1 - - [22/May/2024 13:35:32] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[2024-05-22 13:35:39,514] 97 werkzeug - INFO - 127.0.0.1 - - [22/May/2024 13:35:39] "GET /predictdata HTTP/1.1" 200 -
+[2024-05-22 13:35:41,474] 97 werkzeug - INFO - 127.0.0.1 - - [22/May/2024 13:35:41] "GET /predictdata HTTP/1.1" 200 -
+[2024-05-22 13:36:09,167] 838 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/app.py", line 29, in predict_datapoint
+    reading_score=float(request.form.get('writing_score')),
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: ''
+[2024-05-22 13:36:09,170] 97 werkzeug - INFO - 127.0.0.1 - - [22/May/2024 13:36:09] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[2024-05-22 13:36:17,887] 97 werkzeug - INFO - 127.0.0.1 - - [22/May/2024 13:36:17] "GET /predictdata HTTP/1.1" 200 -
+[2024-05-22 13:36:35,111] 838 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/app.py", line 30, in predict_datapoint
+    math_score=float(request.form.get('math_score'))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+[2024-05-22 13:36:35,114] 97 werkzeug - INFO - 127.0.0.1 - - [22/May/2024 13:36:35] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -

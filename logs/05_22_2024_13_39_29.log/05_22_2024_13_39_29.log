@@ -1,0 +1,128 @@
+[2024-05-22 13:39:29,665] 97 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+[2024-05-22 13:39:29,665] 97 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[2024-05-22 13:39:40,490] 97 werkzeug - INFO - 127.0.0.1 - - [22/May/2024 13:39:40] "GET /predictdata HTTP/1.1" 200 -
+[2024-05-22 13:39:51,430] 838 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/app.py", line 29, in predict_datapoint
+    reading_score=float(request.form.get('writing_score')),
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: ''
+[2024-05-22 13:39:51,435] 97 werkzeug - INFO - 127.0.0.1 - - [22/May/2024 13:39:51] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[2024-05-22 13:39:57,110] 97 werkzeug - INFO - 127.0.0.1 - - [22/May/2024 13:39:57] "GET /predictdata HTTP/1.1" 200 -
+[2024-05-22 13:40:13,262] 838 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "/home/jagannath/ML_Project/src/pipeline/predict_pipeline.py", line 20, in predict
+    data_scaled=preprocessor.transform(features)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/sklearn/utils/_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/sklearn/compose/_column_transformer.py", line 1003, in transform
+    raise ValueError(f"columns are missing: {diff}")
+ValueError: columns are missing: {'writing_score'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/app.py", line 39, in predict_datapoint
+    results=predict_pipeline.predict(pred_df)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/src/pipeline/predict_pipeline.py", line 25, in predict
+    raise CustomException(e,sys)
+src.exception.CustomException: Error occured in python script name [/home/jagannath/ML_Project/src/pipeline/predict_pipeline.py] line number [20] error message[columns are missing: {'writing_score'}]
+[2024-05-22 13:40:13,266] 97 werkzeug - INFO - 127.0.0.1 - - [22/May/2024 13:40:13] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[2024-05-22 13:41:52,561] 97 werkzeug - INFO - 127.0.0.1 - - [22/May/2024 13:41:52] "GET /predictdata HTTP/1.1" 200 -
+[2024-05-22 13:42:08,642] 838 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "/home/jagannath/ML_Project/src/pipeline/predict_pipeline.py", line 20, in predict
+    pred = model.predict(data_scaled)
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/sklearn/utils/_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/sklearn/compose/_column_transformer.py", line 1003, in transform
+    raise ValueError(f"columns are missing: {diff}")
+ValueError: columns are missing: {'writing_score'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/app.py", line 39, in predict_datapoint
+    predict_pipeline = PredictPipeline()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/src/pipeline/predict_pipeline.py", line 25, in predict
+src.exception.CustomException: Error occured in python script name [/home/jagannath/ML_Project/src/pipeline/predict_pipeline.py] line number [20] error message[columns are missing: {'writing_score'}]
+[2024-05-22 13:42:08,647] 97 werkzeug - INFO - 127.0.0.1 - - [22/May/2024 13:42:08] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[2024-05-22 13:42:43,765] 97 werkzeug - INFO - 127.0.0.1 - - [22/May/2024 13:42:43] "GET /predictdata HTTP/1.1" 200 -
+[2024-05-22 13:42:58,471] 838 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "/home/jagannath/ML_Project/src/pipeline/predict_pipeline.py", line 20, in predict
+    pred = model.predict(data_scaled)
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/sklearn/utils/_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/sklearn/compose/_column_transformer.py", line 1003, in transform
+    raise ValueError(f"columns are missing: {diff}")
+ValueError: columns are missing: {'writing_score'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/app.py", line 39, in predict_datapoint
+    predict_pipeline = PredictPipeline()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/src/pipeline/predict_pipeline.py", line 25, in predict
+src.exception.CustomException: Error occured in python script name [/home/jagannath/ML_Project/src/pipeline/predict_pipeline.py] line number [20] error message[columns are missing: {'writing_score'}]
+[2024-05-22 13:42:58,476] 97 werkzeug - INFO - 127.0.0.1 - - [22/May/2024 13:42:58] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -

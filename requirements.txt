@@ -4,5 +4,7 @@ seaborn
 scikit-learn
 catboost
 xgboost
+dill
+flask
 
 -e. # this connect our setup.py but it should not be installed, so I will write some condition in get_requirements function.

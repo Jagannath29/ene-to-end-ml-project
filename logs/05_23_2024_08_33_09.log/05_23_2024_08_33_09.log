@@ -1,0 +1,9 @@
+[2024-05-23 08:33:09,849] 97 werkzeug - WARNING -  * Debugger is active!
+[2024-05-23 08:33:09,880] 97 werkzeug - INFO -  * Debugger PIN: 126-782-168
+[2024-05-23 08:33:18,947] 97 werkzeug - INFO - 127.0.0.1 - - [23/May/2024 08:33:18] "GET / HTTP/1.1" 200 -
+[2024-05-23 08:33:52,189] 97 werkzeug - INFO - 127.0.0.1 - - [23/May/2024 08:33:52] "GET /predictdata HTTP/1.1" 200 -
+[2024-05-23 08:34:04,987] 97 werkzeug - INFO - 127.0.0.1 - - [23/May/2024 08:34:04] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[2024-05-23 08:34:05,019] 97 werkzeug - INFO - 127.0.0.1 - - [23/May/2024 08:34:05] "[36mGET /predictdata?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2024-05-23 08:34:05,019] 97 werkzeug - INFO - 127.0.0.1 - - [23/May/2024 08:34:05] "[36mGET /predictdata?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2024-05-23 08:34:05,066] 97 werkzeug - INFO - 127.0.0.1 - - [23/May/2024 08:34:05] "[36mGET /predictdata?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2024-05-23 08:35:32,776] 97 werkzeug - INFO -  * Detected change in '/home/jagannath/ML_Project/app.py', reloading

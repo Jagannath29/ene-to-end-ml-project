@@ -1,0 +1,43 @@
+[2024-05-23 08:37:21,619] 97 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.101.5:5000
+[2024-05-23 08:37:21,619] 97 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[2024-05-23 08:37:30,204] 838 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/app.py", line 29, in predict_datapoint
+    reading_score=float(request.form.get('writing_score')),
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: ''
+[2024-05-23 08:37:30,206] 97 werkzeug - INFO - 127.0.0.1 - - [23/May/2024 08:37:30] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[2024-05-23 08:37:34,159] 838 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/hell/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jagannath/ML_Project/app.py", line 29, in predict_datapoint
+    reading_score=float(request.form.get('writing_score')),
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: ''
+[2024-05-23 08:37:34,160] 97 werkzeug - INFO - 127.0.0.1 - - [23/May/2024 08:37:34] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -

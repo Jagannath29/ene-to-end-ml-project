@@ -4,15 +4,14 @@ from src.exception import CustomException
 from src.utils import load_object
 import os
 
-
 class PredictPipeline:
     def __init__(self):
         pass
 
     def predict(self,features):
         try:
-            model_path=os.path.join("artifacts","model.pkl")
-            preprocessor_path=os.path.join('artifacts','preprocessor.pkl')
+            model_path='/home/jagannath/ML_Project/src/components/artifacts/model.pkl'
+            preprocessor_path='/home/jagannath/ML_Project/src/components/artifacts/proprocessor.pkl'
             print("Before Loading")
             model=load_object(file_path=model_path)
             preprocessor=load_object(file_path=preprocessor_path)
@@ -30,11 +29,11 @@ class CustomData:
     def __init__(  self,
         gender: str,
         race_ethnicity: str,
-        parental_level_of_education:str,
+        parental_level_of_education,
         lunch: str,
         test_preparation_course: str,
         reading_score: int,
-        math_score: int):
+        writing_score: int):
 
         self.gender = gender
 
@@ -48,7 +47,7 @@ class CustomData:
 
         self.reading_score = reading_score
 
-        self.math_score = math_score
+        self.writing_score = writing_score
 
     def get_data_as_data_frame(self):
         try:
@@ -59,7 +58,7 @@ class CustomData:
                 "lunch": [self.lunch],
                 "test_preparation_course": [self.test_preparation_course],
                 "reading_score": [self.reading_score],
-                "math_score": [self.math_score],
+                "writing_score": [self.writing_score],
             }
 
             return pd.DataFrame(custom_data_input_dict)
